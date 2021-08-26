@@ -1,50 +1,55 @@
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 type TMeta = [
   {
-    name: `description`,
-    content: string,
+    name: 'description',
+    content: string
   },
   {
-    property: `og:title`,
-    content: string,
+    property: 'og:title',
+    content: string
   },
   {
-    property: `og:description`,
-    content: string,
+    property: 'og:description',
+    content: string
   },
   {
-    property: `og:type`,
-    content: string,
+    property: 'og:type',
+    content: string
   },
   {
-    name: `twitter:card`,
-    content: string,
+    name: 'twitter:card',
+    content: string
   },
   {
-    name: `twitter:creator`,
-    content: string,
+    name: 'twitter:creator',
+    content: string
   },
   {
-    name: `twitter:title`,
-    content: string,
+    name: 'twitter:title',
+    content: string
   },
   {
-    name: `twitter:description`,
-    content: string,
-  },
+    name: 'twitter:description',
+    content: string
+  }
 ]
 
 interface IProps {
-  description?: string, 
-  lang?: string, 
-  meta?: TMeta | [], 
+  description?: string,
+  lang?: string,
+  meta?: TMeta | [],
   title?: string
 }
 
-function Seo({ description, lang, meta = [], title }: IProps) {
+const Seo: React.FC<IProps> = ({
+  description,
+  lang,
+  meta = [],
+  title,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -102,7 +107,7 @@ function Seo({ description, lang, meta = [], title }: IProps) {
           name: `twitter:description`,
           content: metaDescription,
         },
-        ...meta
+        ...meta,
       ]}
     />
   )

@@ -1,3 +1,11 @@
-@import "./helpers/all.scss";
-@import "./layouts.scss";
-@import "./components/all.scss";
+@import './helpers/all.scss';
+@import './layouts.scss';
+@import './components/all.scss';
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--typ-primary);
+  font-size: 18px;
+  line-height: 1.5em;
+}
