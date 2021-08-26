@@ -2,12 +2,10 @@ import * as React from 'react'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import { Navbar } from '../components/Navbar'
 
 const IndexPage: React.FC = () => (
   <Layout>
     <Seo title="Home" />
-    <Navbar />
     {/* <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}

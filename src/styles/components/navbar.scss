@@ -27,7 +27,7 @@
 }
 
 .navbar-nav {
-  margin-right: size(160, 40);
+  margin-right: size(160, 20);
 }
 
 .navbar-nav__items {
@@ -64,7 +64,9 @@
 
 .navbar-nav__link {
   color: var(--nav-default);
-  &--active {
+  transition: color 0.3s ease;
+  &--active,
+  &:hover {
     color: var(--nav-active);
   }
 }

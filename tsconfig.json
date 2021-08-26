@@ -4,14 +4,15 @@
     "module": "commonjs",
     "target": "esnext",
     "jsx": "preserve",
-    "lib": ["dom", "es2015", "es2017", "ESNext"],
+    "lib": ["dom", "esnext"],
     "strict": false,
     "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "removeComments": false,
+    "removeComments": false
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "public", ".cache"]
 }

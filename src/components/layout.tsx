@@ -1,7 +1,7 @@
 import * as React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./Header"
+import { Navbar } from "./Navbar"
 
 interface IProps {
   children?: React.ReactNode;
@@ -20,7 +20,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <Navbar />
         <main>{children}</main>
     </>
   )

@@ -4,52 +4,47 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 type TMeta = [
   {
-    name: 'description',
+    name: 'description'
     content: string
   },
   {
-    property: 'og:title',
+    property: 'og:title'
     content: string
   },
   {
-    property: 'og:description',
+    property: 'og:description'
     content: string
   },
   {
-    property: 'og:type',
+    property: 'og:type'
     content: string
   },
   {
-    name: 'twitter:card',
+    name: 'twitter:card'
     content: string
   },
   {
-    name: 'twitter:creator',
+    name: 'twitter:creator'
     content: string
   },
   {
-    name: 'twitter:title',
+    name: 'twitter:title'
     content: string
   },
   {
-    name: 'twitter:description',
+    name: 'twitter:description'
     content: string
   }
 ]
 
 interface IProps {
-  description?: string,
-  lang?: string,
-  meta?: TMeta | [],
+  description?: string
+  lang?: string
+  meta?: TMeta | []
   title?: string
 }
 
-const Seo: React.FC<IProps> = ({
-  description,
-  lang,
-  meta = [],
-  title,
-}) => {
+const Seo: React.FC<IProps> = ({ description, lang, meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {

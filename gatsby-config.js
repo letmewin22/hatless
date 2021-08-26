@@ -50,6 +50,8 @@ module.exports = {
       options: {
         // Gatsby required rules directory
         rulePaths: [gatsbyRequiredRules],
+        emitWarning: true,
+        failOnError: false,
         // Default settings that may be ommitted or customized
         stages: ['develop'],
         extensions: ['js', 'jsx', 'ts', 'tsx'],

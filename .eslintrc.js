@@ -1,5 +1,5 @@
 module.exports = {
-  parser: 'babel-eslint', // uses babel-eslint transforms
+  parser: '@typescript-eslint/parser', // uses babel-eslint transforms
   settings: {
     react: {
       version: 'detect', // detect react version
@@ -9,18 +9,17 @@ module.exports = {
     node: true, // defines things like process.env when generating through node
   },
   extends: [
-    'eslint:recommended', // use recommended configs
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     'no-anonymous-exports-page-templates': 'warn',
     'limited-exports-page-templates': 'warn',
     'arrow-parens': [1, 'as-needed', { requireForBlockBody: false }],
     'comma-dangle': 'off',
     'no-console': 'off',
-    'vue/require-default-prop': 'off',
-    'vue/no-v-html': 'off',
     'unicorn/prefer-text-content': 'off',
     'no-new': 'off',
     'no-unused-vars': 'warn',

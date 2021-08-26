@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
     {
       text: 'Vacatures',
       to: '#',
-      badge: 2
+      badge: 2,
     },
     {
       text: 'Contact',
@@ -42,29 +42,29 @@ export const Navbar: React.FC = () => {
           <img src="/logo.svg" alt="logo" className="navbar__logo-img" />
         </Link>
         <div className="navbar__right">
-
-        <nav className="navbar__nav navbar-nav">
-          <ul className="navbar-nav__items">
-            {navbarItems.map(item => (
-              <li 
-              key={item.text}
-              className={`${item.badge 
-                ? 'navbar-nav__item navbar-nav__item--badge' 
-                : 'navbar-nav__item'
-              }`}
-              >
-                <Link
-                  to={item.to}
-                  activeClassName="navbar-nav__link--active"
-                  className="navbar-nav__link"
+          <nav className="navbar__nav navbar-nav">
+            <ul className="navbar-nav__items">
+              {navbarItems.map(item => (
+                <li
+                  key={item.text}
+                  className={`${
+                    item.badge
+                      ? 'navbar-nav__item navbar-nav__item--badge'
+                      : 'navbar-nav__item'
+                  }`}
                 >
-                  {item.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <Button text="Kickstart jouw project!"/>
+                  <Link
+                    to={item.to}
+                    activeClassName="navbar-nav__link--active"
+                    className="navbar-nav__link"
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Button text="Kickstart jouw project!" />
         </div>
       </div>
     </div>
