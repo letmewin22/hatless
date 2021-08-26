@@ -10,7 +10,25 @@
   background-color: #fff;
   border-radius: 6px;
   color: white;
+  display: flex;
+  align-items: center;
   &--primary {
     background-color: var(--btn-primary);
+  }
+  @include media('<=#{$br1}') {
+    padding-left: 55px;
+    padding-right: 55px;
+    font-size: 14px;
+    line-height: 1em;
+  }
+}
+
+.btn__icon {
+  display: block;
+  max-width: 100%;
+  margin-left: 16px;
+  width: 31px;
+  @include media('<=#{$br1}') {
+    width: 27px;
   }
 }
